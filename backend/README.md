@@ -1,3 +1,8 @@
+## Before run the Server
+
+### `npm install`
+to download and install dependencies.
+
 ## Available Scripts
 
 In the project directory, you can run:
