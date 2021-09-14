@@ -3,6 +3,15 @@
 # dependencies
 /frontend/node_modules
 /backend/node_modules
+/backend/.adminbro
+.idea
+*-lock.json
+# production
+/frontend/build
+/backend/build
+
+
+
 
 /.pnp
 .pnp.js
@@ -10,8 +19,6 @@
 # testing
 /coverage
 
-# production
-/build
 
 # misc
 .DS_Store
