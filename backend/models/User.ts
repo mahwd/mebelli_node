@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
-import ICategory from "../interfaces/Category";
+import IUser from "../interfaces/User";
 
-const categorySchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true
@@ -21,4 +21,4 @@ const categorySchema = new mongoose.Schema({
     }]
 })
 
-export default mongoose.model<ICategory>('Category', categorySchema)
+export default mongoose.model<IUser>('User', userSchema)
