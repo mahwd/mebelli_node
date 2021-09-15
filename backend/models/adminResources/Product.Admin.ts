@@ -1,15 +1,15 @@
 import Product from "../Product";
 import actions from "./actions/password.hooks";
+import AdminBro from 'admin-bro'
 
 const ProductAdmin = {
     resource: Product,
     options: {
         properties: {
-            encryptedPassword: {
-                isVisible: false
-            },
-            password: {
-                type: "password"
+            thumbnailUrl: {
+                components: {
+                    edit: AdminBro.bundle('./custom_components/upload-image-edit.tsx')
+                }
             }
         },
         actions: {

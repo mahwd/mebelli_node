@@ -15,7 +15,11 @@ const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
             return null
         }
     },
-    null
+    null,
+    {
+        resave: false,
+        saveUninitialized: false
+    }
 )
 
 export default {router}

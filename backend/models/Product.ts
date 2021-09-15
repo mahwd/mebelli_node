@@ -16,11 +16,11 @@ const ProductSchema: mongoose.Schema = new mongoose.Schema({
     },
     hasDiscount: {
         type: Boolean,
-        required: true
+        required: false
     },
     discount: {
         type: Number,
-        required: true
+        required: false
     },
     stock: {
         type: Number,
