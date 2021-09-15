@@ -3,7 +3,7 @@ import IProduct from "./Product";
 
 export default interface ICategory extends Document {
     title: string;
-    parentId: number;
+    parentId: ICategory;
     thumbnailUrl: string;
     products: IProduct[]
 }

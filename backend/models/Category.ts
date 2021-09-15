@@ -11,7 +11,8 @@ const categorySchema = new mongoose.Schema({
         required: false
     },
     parentId: {
-        type: Number,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Category',
         required: false
     },
     products: [{

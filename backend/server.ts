@@ -1,10 +1,11 @@
 import http from 'http';
-import bodyParser  from 'body-parser'
+import bodyParser from 'body-parser'
 import express from 'express';
 import mongoose from 'mongoose';
 import config from './config';
-import productRoutes from './routes/product';
-import adminBroRoutes from "./routes/adminBro";
+import productRoutes from './routes/productRoutes';
+import adminBroRoutes from "./routes/adminBroRoutes";
+import {adminBro} from "./config/AdminBroConfig";
 
 
 const router = express.Router();
@@ -14,9 +15,6 @@ const app = express();
 // app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-
-app.use('/api', productRoutes)
-app.use(adminBroRoutes.adminBro.options.rootPath, adminBroRoutes.router)
 
 /** Rules of our API */
 router.use((req, res, next) => {
@@ -32,9 +30,16 @@ router.use((req, res, next) => {
 });
 
 /* connecting to mongo */
-mongoose.connect(config.mongo.url, config.mongo.options).then((mongo) => {
-    console.log('connected to mongodb!')
-})
+const run = async () => {
+    mongoose.connect(config.mongo.url, config.mongo.options).then((mongo) => {
+        console.log('connected to mongodb!')
+    })
+    app.use('/api', productRoutes)
+    app.use(adminBro.options.rootPath,  adminBroRoutes.router)
+}
+
+run()
+
 
 const server = http.createServer(app)
 

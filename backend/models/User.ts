@@ -2,23 +2,22 @@ import mongoose from "mongoose";
 import IUser from "../interfaces/User";
 
 const userSchema = new mongoose.Schema({
-    title: {
+    firstname: {
         type: String,
         required: true
     },
-    thumbnailUrl: {
+    lastname: {
         type: String,
-        required: false
-    },
-    parentId: {
-        type: Number,
-        required: false
-    },
-    products: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Product',
         required: true
-    }]
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    encryptedPassword: {
+        type: String,
+        required: true
+    }
 })
 
 export default mongoose.model<IUser>('User', userSchema)

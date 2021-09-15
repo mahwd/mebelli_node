@@ -1,6 +1,5 @@
 import IProduct from "../interfaces/Product";
 import mongoose from "mongoose";
-import ICategory from "../interfaces/Category";
 
 const ProductSchema: mongoose.Schema = new mongoose.Schema({
     title: {
