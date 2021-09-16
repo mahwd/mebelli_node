@@ -1,35 +1,29 @@
-import React, { Component, FC } from 'react'
-import { BasePropertyProps } from 'admin-bro'
+import React, {FC} from 'react'
+import {BasePropertyProps} from 'admin-bro'
 import {Box, Label, DropZone, DropZoneProps} from '@admin-bro/design-system'
+import styled from "styled-components";
+
+const BoxContainer = styled.div`
+  margin-bottom: 50px;
+`
 
 const Edit: FC<BasePropertyProps> = (props) => {
     const {property, onChange} = props
 
-    const handleDropZoneChange:DropZoneProps['onChange'] = (files) => {
+    const handleDropZoneChange: DropZoneProps['onChange'] = (files) => {
+        // @ts-ignore
         onChange(property.name, files[0])
         console.log(files)
     }
 
-    return(
-        <Box>
-            <Label>{property.label}</Label>
-            <DropZone onChange={handleDropZoneChange} />
-        </Box>
+    return (
+        <BoxContainer>
+            <Box className={'upload-box'}>
+                <Label>{property.label}</Label>
+                <DropZone onChange={handleDropZoneChange}/>
+            </Box>
+        </BoxContainer>
     )
 }
 
 export default Edit
-
-// import React from 'react'
-// import { BasePropertyProps } from 'admin-bro'
-// import { Box, Label } from '@admin-bro/design-system'
-
-// const Edit: React.FC<BasePropertyProps> = (props) => {
-//     const {property, onChange} = props
-
-//     return(
-//         <Box>{property.label}</Box>
-//     )
-// }
-
-// export default Edit

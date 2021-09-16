@@ -1,9 +1,9 @@
-import Product from "../Product";
-import actions from "./actions/product.hooks";
+import Category from "../Category";
+import actions from "./actions/category.hooks";
 import AdminBro from 'admin-bro'
 
 const ProductAdmin = {
-    resource: Product,
+    resource: Category,
     options: {
         properties: {
             thumbnailUrl: {
