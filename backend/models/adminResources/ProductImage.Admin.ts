@@ -1,12 +1,12 @@
-import Product from "../Product";
-import actions from "./actions/product.upload.hooks";
-import AdminBro from 'admin-bro'
+import ProductImage from "../ProductImage";
+import AdminBro from "admin-bro";
+import actions from "./actions/productImage.upload.hooks";
 
-const ProductAdmin = {
-    resource: Product,
+const ProductImageAdmin = {
+    resource: ProductImage,
     options: {
         properties: {
-            thumbnailUrl: {
+            source: {
                 components: {
                     edit: AdminBro.bundle('./custom_components/upload-image-edit.tsx'),
                     list: AdminBro.bundle('./custom_components/upload-image-list.tsx'),
@@ -26,4 +26,4 @@ const ProductAdmin = {
     }
 }
 
-export default ProductAdmin
+export default ProductImageAdmin

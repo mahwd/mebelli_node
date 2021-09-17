@@ -4,6 +4,7 @@ import AdminBroExpress from '@admin-bro/express'
 import CategoryAdmin from "../models/adminResources/Category.Admin";
 import UserAdmin from "../models/adminResources/User.Admin";
 import ProductAdmin from "../models/adminResources/Product.Admin";
+import ProductImageAdmin from "../models/adminResources/ProductImage.Admin";
 
 /* Register mongodb adapter */
 AdminBro.registerAdapter(AdminBroMongoose)
@@ -11,7 +12,7 @@ AdminBro.registerAdapter(AdminBroMongoose)
 /* AdminBro options */
 export const options: AdminBroOptions = {
     rootPath: '/admin',
-    resources: [ProductAdmin, UserAdmin, CategoryAdmin],
+    resources: [ProductImageAdmin, ProductAdmin, UserAdmin, CategoryAdmin],
     branding: {
         companyName: 'Mebelli'
     }

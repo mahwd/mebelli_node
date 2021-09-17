@@ -5,12 +5,12 @@ import { BasePropertyProps } from 'admin-bro'
 const Edit: React.FC<BasePropertyProps> = (props) => {
     const { record } = props
 
-    const srcImg = record?.params[ 'profilePhotoLocation']
+    const srcImg = record?.params['thumbnailUrl']
     return (
         <Box>
             {srcImg ? (
-                <img src={srcImg} width="100px"/>
-            ) : 'no image'}
+                <img src={srcImg} width="100px" alt="image"/>
+            ) : 'no images'}
         </Box>
     )
 }

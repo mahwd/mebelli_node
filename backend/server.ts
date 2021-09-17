@@ -15,6 +15,9 @@ const app = express();
 // app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
+/** Importing static files */
+
+app.use('/uploads', express.static("uploads"))
 
 /** Rules of our API */
 router.use((req, res, next) => {
@@ -38,11 +41,11 @@ const run = async () => {
     app.use(adminBro.options.rootPath,  adminBroRoutes.router)
 }
 
-run()
-
 
 const server = http.createServer(app)
 
 server.listen(PORT, () => {
     console.log('server listening on port', PORT)
 })
+
+run()

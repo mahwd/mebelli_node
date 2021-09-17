@@ -30,10 +30,11 @@ const ProductSchema: mongoose.Schema = new mongoose.Schema({
         type: String,
         required: true
     },
-    imageUrl: {
-        type: String,
+    productsImages: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'ProductImage',
         required: true
-    }   ,
+    }],
     category: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Category',
