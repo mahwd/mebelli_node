@@ -13,6 +13,15 @@ const ProductAdmin = {
                     list: AdminBro.bundle('./custom_components/upload-image-list.tsx'),
                     show: AdminBro.bundle('./custom_components/upload-image-show.tsx'),
                 }
+            },
+            description: {
+                type: 'richtext',
+                props: {
+                    borderless: false, //
+                    quill: {
+                        // some custom props
+                    },
+                },
             }
         },
         actions: {

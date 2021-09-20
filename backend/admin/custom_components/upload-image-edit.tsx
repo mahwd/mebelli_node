@@ -31,12 +31,10 @@ const Edit: FC<BasePropertyProps> = (props) => {
                     <Label>{property.label}</Label>
                     <DropZone onChange={handleDropZoneChange} multiple={true}/>
                 </Fragment>
-
                 {images && images.length &&
                 images.map((image, index) =>
                     <Img src={image} key={index} height={"100px"} alt={"image"}/>
-                )
-                }
+                ) || ""}
             </Box>
         </BoxContainer>
     )
