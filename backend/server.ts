@@ -4,6 +4,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import config from './config';
 import productRoutes from './routes/productRoutes';
+import categoryRoutes from "./routes/categoryRoutes";
 import adminBroRoutes from "./routes/adminBroRoutes";
 import {adminBro} from "./config/AdminBroConfig";
 
@@ -18,6 +19,7 @@ app.use(bodyParser.json())
 /** Importing static files */
 
 app.use('/uploads', express.static("uploads"))
+app.use('/', express.static("static"))
 
 /** Rules of our API */
 router.use((req, res, next) => {
@@ -37,6 +39,7 @@ const run = async () => {
     mongoose.connect(config.mongo.url, config.mongo.options).then((mongo) => {
         console.log('connected to mongodb!')
     })
+    app.use('/api', categoryRoutes)
     app.use('/api', productRoutes)
     app.use(adminBro.options.rootPath,  adminBroRoutes.router)
 }

@@ -1,4 +1,4 @@
-import Product from "../Product";
+import Product from "../models/Product";
 import actions from "./actions/product.upload.hooks";
 import AdminBro from 'admin-bro'
 
@@ -6,10 +6,12 @@ const ProductAdmin = {
     resource: Product,
     options: {
         properties: {
-            thumbnailUrl: {
+            images: {isVisible: false},
+            imageFiles: {
                 components: {
                     edit: AdminBro.bundle('./custom_components/upload-image-edit.tsx'),
                     list: AdminBro.bundle('./custom_components/upload-image-list.tsx'),
+                    show: AdminBro.bundle('./custom_components/upload-image-show.tsx'),
                 }
             }
         },

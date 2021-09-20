@@ -16,7 +16,6 @@ const before = async (request: any, context: any) => {
     if (request.method === 'post') {
         const {source, ...otherParams} = request.payload;
 
-        // eslint-disable-next-line no-param-reassign
         context.uploadImage = source;
 
         return {

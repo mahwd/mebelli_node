@@ -26,13 +26,8 @@ const ProductSchema: mongoose.Schema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    thumbnailUrl: {
+    images: [{
         type: String,
-        required: true
-    },
-    productsImages: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'ProductImage',
         required: true
     }],
     category: {
