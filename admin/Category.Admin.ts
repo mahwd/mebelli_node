@@ -4,9 +4,7 @@ const CategoryAdmin = {
     resource: Category,
     options: {
         properties: {
-            parentId: {
-                availableValues: async () => await Category.find({parentId: null}).exec()
-            }
+            parentId: {}
         }
     }
 }
