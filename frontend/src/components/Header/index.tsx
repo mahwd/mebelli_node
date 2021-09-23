@@ -7,18 +7,16 @@ type HeaderProps = {
 }
 
 const Header = ({categories}: HeaderProps) => (
-    <div>
-        <header className={"header"} title="Index">
-            <ul>
-                {categories && categories.map((category, index) => (
-                    <a href="#" key={index}>
-                        <li>{category.title}</li>
+    <header className={"header"} title="Index">
+        <ul>
+            {categories && categories.map((category, index) => (
+                <a href="#" key={index}>
+                    <li>{category.title}</li>
 
-                    </a>
-                ))}
-            </ul>
-        </header>
-    </div>
+                </a>
+            ))}
+        </ul>
+    </header>
 );
 
 export default Header

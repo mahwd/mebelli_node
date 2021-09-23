@@ -1,9 +1,20 @@
 .dashboard {
+  width: 90vw;
+  height: 100%;
   display: flex;
   flex-direction: row;
   .dashboard-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 90vw;
     .dashboard-item {
-
+      width: 400px;
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 0 5px 5px #ccc;
+      margin: 15px;
     }
   }
 }
