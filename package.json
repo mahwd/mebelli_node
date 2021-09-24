@@ -15,7 +15,6 @@
     "@types/mongoose": "^5.11.97",
     "@types/node": "^16.9.1",
     "@types/react": "^17.0.22",
-    "@types/styled-components": "^5.1.14",
     "node-ts": "^5.1.2",
     "ts-node-dev": "^1.1.8",
     "tslib": "^2.3.1",
@@ -31,7 +30,6 @@
     "express": "^4.17.1",
     "express-formidable": "^1.2.0",
     "express-session": "^1.17.2",
-    "mongoose": "^6.0.5",
-    "styled-components": "^5.3.1"
+    "mongoose": "^6.0.5"
   }
 }
