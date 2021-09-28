@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
-import ICategory from "../interfaces/Category";
+import ICarousel from "../interfaces/Carousel";
 
-const categorySchema = new mongoose.Schema({
+const carouselSchema = new mongoose.Schema({
     title: {
         type: String,
         required: false
@@ -16,4 +16,4 @@ const categorySchema = new mongoose.Schema({
     }
 })
 
-export default mongoose.model<ICategory>('Category', categorySchema)
+export default mongoose.model<ICarousel>('Carousel', carouselSchema)

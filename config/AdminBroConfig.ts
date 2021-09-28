@@ -4,6 +4,7 @@ import AdminBroExpress from '@admin-bro/express'
 import CategoryAdmin from "../admin/Category.Admin";
 import UserAdmin from "../admin/User.Admin";
 import ProductAdmin from "../admin/Product.Admin";
+import CarouselAdmin from "../admin/Carousel.Admin";
 
 /* Register mongodb adapter */
 AdminBro.registerAdapter(AdminBroMongoose)
@@ -11,7 +12,7 @@ AdminBro.registerAdapter(AdminBroMongoose)
 /* AdminBro options */
 export const options: AdminBroOptions = {
     rootPath: '/admin',
-    resources: [ProductAdmin, UserAdmin, CategoryAdmin],
+    resources: [CarouselAdmin, ProductAdmin, UserAdmin, CategoryAdmin],
     dashboard: {
         handler: async () => {
             return {some: 'output'}
