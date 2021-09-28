@@ -7,36 +7,54 @@
   justify-content: center;
   align-items: center;
   position: sticky;
-  top: 0;
-  right: 0;
   width: 100vw;
   height: 6vh;
 
-  ul {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  //ul {
+  //  width: 100%;
+  //  height: 100%;
+  //  display: flex;
+  //  flex-direction: row;
+  //  justify-content: center;
+  //  align-items: center;
+  //  list-style: none;
+  //  margin: 0;
+  //  padding: 0;
+  //
+  //  a {
+  //    transition: all .3s ease;
+  //    text-decoration: none;
+  //    color: #fff;
+  //    height: 100%;
+  //    display: flex;
+  //    align-items: center;
+  //
+  //    li {
+  //      padding: 15px;
+  //      transition: all .3s ease;
+  //
+  //    }
+  //
+  //    &:hover {
+  //      background-color: $accent;
+  //      text-decoration: none;
+  //      color: #fff;
+  //      li {
+  //        text-indent: 5px;
+  //        text-decoration: none;
+  //      }
+  //    }
+  //  }
+  //}
+  .navbar-container {
 
-    a {
-      transition: all .3s ease;
-      text-decoration: none;
-      color: #fff;
-      height: 100%;
-      display: flex;
-      align-items: center;
-
-      li {
-        padding: 15px;
-      }
-
-      &:hover {
-        background-color: $accent;
+    .navbar-nav {
+      a {
+        transition: all .3s ease;
+        text-decoration: none;
+        &:hover {
+          color: red;
+        }
       }
     }
   }

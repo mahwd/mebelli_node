@@ -1,0 +1,43 @@
+.landing {
+  width: 100%;
+  flex: 1;
+
+  .slider-container {
+    width:100%;
+    height: 500px;
+    background-color: #d0d0d0;
+    margin: 0 auto;
+
+    .slick-slider, .slick-list, .slick-track, .slider-item, .slick-active>div {
+      height: 100%;
+    }
+    .slider-item-image {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      .slider-item-text {
+        display: inline-block;
+        max-width: 250px;
+        text-align: right;
+        padding: 2px 15px;
+        color: black;
+        background-color: white;
+        font-size: 22px;
+        position: absolute;
+        bottom: 55px;
+        right: 75px;
+      }
+    }
+  }
+}
+
+@keyframes slide-from-up {
+  from {
+    transform: rotateY(-20%);
+  }
+  to {
+    transform: rotateY(0);
+  }
+}

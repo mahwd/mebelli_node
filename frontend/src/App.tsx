@@ -3,7 +3,8 @@ import './App.css';
 import Header from './components/Header';
 import {Category} from "./models/models";
 import './assets/main.scss'
-import Dashboard from "./components/Dashboard";
+import Landing from "./components/Landing";
+import Footer from "./components/Footer";
 
 function App() {
     const [categories, setCategories] = useState<Category[]>([])
@@ -17,9 +18,10 @@ function App() {
     }, [])
 
     return (
-        <div className="App">
-            <Header categories={categories} />
-            <Dashboard/>
+        <div className="App bp3-dark">
+            <Header categories={categories}/>
+            <Landing/>
+            <Footer />
         </div>
     );
 }
