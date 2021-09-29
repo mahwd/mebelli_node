@@ -1,5 +1,4 @@
 import React from 'react';
-import {Category} from "../../models/models";
 import "./footer.scss";
 
 type FooterProps = {}

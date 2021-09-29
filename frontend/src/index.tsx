@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './assets/main.scss'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import 'keen-slider/keen-slider.min.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

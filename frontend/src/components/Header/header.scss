@@ -1,7 +1,6 @@
 @import "../../assets/theme";
 
 .header {
-  background-color: $primary;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -9,53 +8,81 @@
   position: sticky;
   width: 100vw;
   height: 6vh;
+  color: $primary;
 
-  //ul {
-  //  width: 100%;
-  //  height: 100%;
-  //  display: flex;
-  //  flex-direction: row;
-  //  justify-content: center;
-  //  align-items: center;
-  //  list-style: none;
-  //  margin: 0;
-  //  padding: 0;
-  //
-  //  a {
-  //    transition: all .3s ease;
-  //    text-decoration: none;
-  //    color: #fff;
-  //    height: 100%;
-  //    display: flex;
-  //    align-items: center;
-  //
-  //    li {
-  //      padding: 15px;
-  //      transition: all .3s ease;
-  //
-  //    }
-  //
-  //    &:hover {
-  //      background-color: $accent;
-  //      text-decoration: none;
-  //      color: #fff;
-  //      li {
-  //        text-indent: 5px;
-  //        text-decoration: none;
-  //      }
-  //    }
-  //  }
-  //}
+
   .navbar-container {
 
-    .navbar-nav {
-      a {
-        transition: all .3s ease;
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-indent: 3px;
+      color: $secondary;
+      transition: transform .3s ease;
+      &:hover {
         text-decoration: none;
+        transform: translateX(5px);
+      }
+    }
+
+    .navbar-nav {
+
+      a.nav-link {
+        transition: width .3s ease;
+        text-decoration: none;
+        position: relative;
+        &::before {
+          content: '';
+          opacity: 0;
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: $secondary;
+          animation-name: underlineAnimOut;
+          animation-duration: .3s;
+          animation-fill-mode: forwards;
+        }
+
         &:hover {
-          color: red;
+          color: $secondary;
+          &::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $secondary;
+            animation-name: underlineAnimIn;
+            animation-fill-mode: forwards;
+            animation-duration: .3s;
+          }
         }
       }
     }
+  }
+}
+
+@keyframes underlineAnimIn {
+  from {
+    width: 0;
+    opacity: .9;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes underlineAnimOut {
+  from {
+    width: 100%;
+    opacity: 1;
+  }
+  to {
+    width: 0;
+    opacity: .9;
   }
 }

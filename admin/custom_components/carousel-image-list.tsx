@@ -5,7 +5,7 @@ import { BasePropertyProps } from 'admin-bro'
 const List: React.FC<BasePropertyProps> = (props) => {
     const { record } = props
 
-    const srcImg = record?.params.image
+    const srcImg = record?.params.imageUrl
     console.log(record?.params)
     return (
         <Box>

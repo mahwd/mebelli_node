@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import config from './config';
 import productRoutes from './routes/productRoutes';
 import categoryRoutes from "./routes/categoryRoutes";
+import carouselRoutes from "./routes/carouselRoutes";
 import adminBroRoutes from "./routes/adminBroRoutes";
 import {adminBro} from "./config/AdminBroConfig";
 
@@ -40,6 +41,7 @@ const run = async () => {
         console.log('connected to mongodb!')
     })
     app.use('/api', categoryRoutes)
+    app.use('/api', carouselRoutes)
     app.use('/api', productRoutes)
     app.use(adminBro.options.rootPath,  adminBroRoutes.router)
 }

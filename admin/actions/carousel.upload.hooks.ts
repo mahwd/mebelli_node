@@ -13,7 +13,7 @@ const after = async (response: any, request: any, context: any) => {
 
         await fs.promises.rename(image.path, filePath);
 
-        await record.update({imageUrl: `/${filePath}`});
+        await record.update({imageUrl: `/${filePath.replace(/\\/g, "/")}`});
     }
     return response;
 };
@@ -34,4 +34,4 @@ const before = async (request: any, context: any) => {
     return request;
 };
 
-module.exports = {after, before};
+export default {after, before};

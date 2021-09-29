@@ -1,6 +1,6 @@
 import Carousel from "../models/Carousel";
 import AdminBro from "admin-bro";
-import carousel_hooks from './actions/carousel.upload.hooks';
+import CarouselHooks from "./actions/carousel.upload.hooks";
 
 const CarouselAdmin = {
     resource: Carousel,
@@ -18,12 +18,12 @@ const CarouselAdmin = {
         },
         actions: {
             new: {
-                before: carousel_hooks.before,
-                after: carousel_hooks.after
+                before: CarouselHooks.before,
+                after: CarouselHooks.after
             },
             edit: {
-                before: carousel_hooks.before,
-                after: carousel_hooks.after
+                before: CarouselHooks.before,
+                after: CarouselHooks.after
             }
         }
     }
